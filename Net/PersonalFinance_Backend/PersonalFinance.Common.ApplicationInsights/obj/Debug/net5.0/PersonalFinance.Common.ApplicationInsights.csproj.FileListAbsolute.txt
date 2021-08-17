@@ -1,0 +1,15 @@
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common.ApplicationInsights\bin\Debug\net5.0\PersonalFinance.Common.ApplicationInsights.deps.json
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common.ApplicationInsights\bin\Debug\net5.0\PersonalFinance.Common.ApplicationInsights.dll
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common.ApplicationInsights\bin\Debug\net5.0\ref\PersonalFinance.Common.ApplicationInsights.dll
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common.ApplicationInsights\bin\Debug\net5.0\PersonalFinance.Common.ApplicationInsights.pdb
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common.ApplicationInsights\bin\Debug\net5.0\PersonalFinance.Common.dll
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common.ApplicationInsights\bin\Debug\net5.0\PersonalFinance.Common.pdb
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common.ApplicationInsights\obj\Debug\net5.0\PersonalFinance.Common.ApplicationInsights.csproj.AssemblyReference.cache
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common.ApplicationInsights\obj\Debug\net5.0\PersonalFinance.Common.ApplicationInsights.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common.ApplicationInsights\obj\Debug\net5.0\PersonalFinance.Common.ApplicationInsights.AssemblyInfoInputs.cache
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common.ApplicationInsights\obj\Debug\net5.0\PersonalFinance.Common.ApplicationInsights.AssemblyInfo.cs
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common.ApplicationInsights\obj\Debug\net5.0\PersonalFinance.Common.ApplicationInsights.csproj.CoreCompileInputs.cache
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common.ApplicationInsights\obj\Debug\net5.0\PersonalFinance.Common.ApplicationInsights.csproj.CopyComplete
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common.ApplicationInsights\obj\Debug\net5.0\PersonalFinance.Common.ApplicationInsights.dll
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common.ApplicationInsights\obj\Debug\net5.0\ref\PersonalFinance.Common.ApplicationInsights.dll
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common.ApplicationInsights\obj\Debug\net5.0\PersonalFinance.Common.ApplicationInsights.pdb

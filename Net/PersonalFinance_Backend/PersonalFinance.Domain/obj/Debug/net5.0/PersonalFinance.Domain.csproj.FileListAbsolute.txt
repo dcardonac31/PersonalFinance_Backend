@@ -1,0 +1,17 @@
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Domain\bin\Debug\net5.0\PersonalFinance.Domain.deps.json
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Domain\bin\Debug\net5.0\PersonalFinance.Domain.dll
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Domain\bin\Debug\net5.0\ref\PersonalFinance.Domain.dll
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Domain\bin\Debug\net5.0\PersonalFinance.Domain.pdb
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Domain\bin\Debug\net5.0\PersonalFinance.Common.dll
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Domain\bin\Debug\net5.0\PersonalFinance.Infraestructure.dll
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Domain\bin\Debug\net5.0\PersonalFinance.Common.pdb
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Domain\bin\Debug\net5.0\PersonalFinance.Infraestructure.pdb
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Domain\obj\Debug\net5.0\PersonalFinance.Domain.csproj.AssemblyReference.cache
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Domain\obj\Debug\net5.0\PersonalFinance.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Domain\obj\Debug\net5.0\PersonalFinance.Domain.AssemblyInfoInputs.cache
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Domain\obj\Debug\net5.0\PersonalFinance.Domain.AssemblyInfo.cs
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Domain\obj\Debug\net5.0\PersonalFinance.Domain.csproj.CoreCompileInputs.cache
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Domain\obj\Debug\net5.0\PersonalFinance.Domain.csproj.CopyComplete
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Domain\obj\Debug\net5.0\PersonalFinance.Domain.dll
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Domain\obj\Debug\net5.0\ref\PersonalFinance.Domain.dll
+D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Domain\obj\Debug\net5.0\PersonalFinance.Domain.pdb
