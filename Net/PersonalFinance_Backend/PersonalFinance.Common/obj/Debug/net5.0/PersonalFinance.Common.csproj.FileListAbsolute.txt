@@ -2,7 +2,6 @@ D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.
 D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common\bin\Debug\net5.0\PersonalFinance.Common.dll
 D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common\bin\Debug\net5.0\ref\PersonalFinance.Common.dll
 D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common\bin\Debug\net5.0\PersonalFinance.Common.pdb
-D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common\obj\Debug\net5.0\PersonalFinance.Common.csproj.AssemblyReference.cache
 D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common\obj\Debug\net5.0\PersonalFinance.Common.GeneratedMSBuildEditorConfig.editorconfig
 D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common\obj\Debug\net5.0\PersonalFinance.Common.AssemblyInfoInputs.cache
 D:\GitRepos\PersonalFinance_Backend\Net\PersonalFinance_Backend\PersonalFinance.Common\obj\Debug\net5.0\PersonalFinance.Common.AssemblyInfo.cs

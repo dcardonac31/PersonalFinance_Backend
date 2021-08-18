@@ -16,7 +16,7 @@ namespace PersonalFinance.Domain.Dtos
         public bool InArrears { get; set; }
         public int NumberMonthsIntArrears { get; set; }
         public bool Paid { get; set; }
-        public DateTime? ModifiedDate { get; set; }
+        public DateTime? ModificationDate { get; set; }
         public string ModificationUser { get; set; }
         public DateTime? CreationDate { get; set; }
         public string CreationUser { get; set; }

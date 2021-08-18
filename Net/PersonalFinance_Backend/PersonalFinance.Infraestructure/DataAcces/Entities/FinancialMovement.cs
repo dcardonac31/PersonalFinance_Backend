@@ -1,9 +1,10 @@
-﻿using System;
+﻿using PersonalFinance.Infraestructure.DataAcces.Entities.Base;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace PersonalFinance.Infraestructure.DataAcces.Entities
 {
-    public class FinancialMovement
+    public class FinancialMovement : BaseEntity
     {
         [Key]
         public int Id { get; set; }
@@ -14,13 +15,5 @@ namespace PersonalFinance.Infraestructure.DataAcces.Entities
         public decimal MovementValue { get; set; }
         [Required]
         public string MovementDetail { get; set; }
-        [Required]
-        public DateTime CreationDate { get; set; }
-        [Required]
-        public string CreationUser { get; set; }
-        public DateTime ModifiedDate { get; set; }
-        public string ModificationUser { get; set; }
-        [Required]
-        public bool Deleted { get; set; }
     }
 }

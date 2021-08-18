@@ -57,7 +57,7 @@ namespace PersonalFinance.Domain.Services
         {
             var existingEntity = await _repository.FirstOrDefaultAsync(x => x.Id == entity.Id).ConfigureAwait(false);
             if (existingEntity is null) return false;
-            existingEntity.ModifiedDate = DateTime.Now;
+            existingEntity.ModificationDate = DateTime.Now;
             existingEntity.ModificationUser = entity.UserName;
             existingEntity.Deleted = true;
             return _repository.Update(existingEntity);

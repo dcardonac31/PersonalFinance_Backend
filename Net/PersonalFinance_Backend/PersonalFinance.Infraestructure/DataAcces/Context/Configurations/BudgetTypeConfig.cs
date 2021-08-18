@@ -26,7 +26,7 @@ namespace PersonalFinance.Infraestructure.DataAcces.Context.Configurations
             builder.Property(e => e.CreationUser);
 
 
-            builder.Property(e => e.ModifiedDate)
+            builder.Property(e => e.ModificationDate)
                 .HasDefaultValue(null);
 
             builder.Property(e => e.ModificationUser)

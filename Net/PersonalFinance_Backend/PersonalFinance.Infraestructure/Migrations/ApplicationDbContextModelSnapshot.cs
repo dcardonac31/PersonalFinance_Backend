@@ -27,11 +27,10 @@ namespace PersonalFinance.Infraestructure.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("CreationDate")
+                    b.Property<DateTime?>("CreationDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreationUser")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Deleted")
@@ -43,11 +42,11 @@ namespace PersonalFinance.Infraestructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("ModificationUser")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("ModifiedDate")
-                        .HasColumnType("datetime2");
 
                     b.HasKey("Id")
                         .HasName("PK_BudgetType");
@@ -58,110 +57,98 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 1,
-                            CreationDate = new DateTime(2021, 8, 16, 23, 21, 6, 182, DateTimeKind.Local).AddTicks(544),
+                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(345),
                             CreationUser = "Migration",
                             Deleted = false,
-                            DescriptionTypeBudget = "Mercado",
-                            ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            DescriptionTypeBudget = "Mercado"
                         },
                         new
                         {
                             Id = 2,
-                            CreationDate = new DateTime(2021, 8, 16, 23, 21, 6, 182, DateTimeKind.Local).AddTicks(2144),
+                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(458),
                             CreationUser = "Migration",
                             Deleted = false,
-                            DescriptionTypeBudget = "Mercado diario",
-                            ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            DescriptionTypeBudget = "Mercado diario"
                         },
                         new
                         {
                             Id = 3,
-                            CreationDate = new DateTime(2021, 8, 16, 23, 21, 6, 182, DateTimeKind.Local).AddTicks(2158),
+                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(467),
                             CreationUser = "Migration",
                             Deleted = false,
-                            DescriptionTypeBudget = "Pago deudas",
-                            ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            DescriptionTypeBudget = "Pago deudas"
                         },
                         new
                         {
                             Id = 4,
-                            CreationDate = new DateTime(2021, 8, 16, 23, 21, 6, 182, DateTimeKind.Local).AddTicks(2160),
+                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(470),
                             CreationUser = "Migration",
                             Deleted = false,
-                            DescriptionTypeBudget = "Ahorros",
-                            ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            DescriptionTypeBudget = "Ahorros"
                         },
                         new
                         {
                             Id = 5,
-                            CreationDate = new DateTime(2021, 8, 16, 23, 21, 6, 182, DateTimeKind.Local).AddTicks(2162),
+                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(473),
                             CreationUser = "Migration",
                             Deleted = false,
-                            DescriptionTypeBudget = "Inversiones",
-                            ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            DescriptionTypeBudget = "Inversiones"
                         },
                         new
                         {
                             Id = 6,
-                            CreationDate = new DateTime(2021, 8, 16, 23, 21, 6, 182, DateTimeKind.Local).AddTicks(2173),
+                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(492),
                             CreationUser = "Migration",
                             Deleted = false,
-                            DescriptionTypeBudget = "Comidas rapidas",
-                            ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            DescriptionTypeBudget = "Comidas rapidas"
                         },
                         new
                         {
                             Id = 7,
-                            CreationDate = new DateTime(2021, 8, 16, 23, 21, 6, 182, DateTimeKind.Local).AddTicks(2174),
+                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(496),
                             CreationUser = "Migration",
                             Deleted = false,
-                            DescriptionTypeBudget = "Vestuario",
-                            ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            DescriptionTypeBudget = "Vestuario"
                         },
                         new
                         {
                             Id = 8,
-                            CreationDate = new DateTime(2021, 8, 16, 23, 21, 6, 182, DateTimeKind.Local).AddTicks(2176),
+                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(499),
                             CreationUser = "Migration",
                             Deleted = false,
-                            DescriptionTypeBudget = "Electrodomesticos",
-                            ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            DescriptionTypeBudget = "Electrodomesticos"
                         },
                         new
                         {
                             Id = 9,
-                            CreationDate = new DateTime(2021, 8, 16, 23, 21, 6, 182, DateTimeKind.Local).AddTicks(2178),
+                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(503),
                             CreationUser = "Migration",
                             Deleted = false,
-                            DescriptionTypeBudget = "Computador",
-                            ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            DescriptionTypeBudget = "Computador"
                         },
                         new
                         {
                             Id = 10,
-                            CreationDate = new DateTime(2021, 8, 16, 23, 21, 6, 182, DateTimeKind.Local).AddTicks(2182),
+                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(510),
                             CreationUser = "Migration",
                             Deleted = false,
-                            DescriptionTypeBudget = "Transporte",
-                            ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            DescriptionTypeBudget = "Transporte"
                         },
                         new
                         {
                             Id = 11,
-                            CreationDate = new DateTime(2021, 8, 16, 23, 21, 6, 182, DateTimeKind.Local).AddTicks(2183),
+                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(513),
                             CreationUser = "Migration",
                             Deleted = false,
-                            DescriptionTypeBudget = "Salud",
-                            ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            DescriptionTypeBudget = "Salud"
                         },
                         new
                         {
                             Id = 12,
-                            CreationDate = new DateTime(2021, 8, 16, 23, 21, 6, 182, DateTimeKind.Local).AddTicks(2185),
+                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(516),
                             CreationUser = "Migration",
                             Deleted = false,
-                            DescriptionTypeBudget = "Arriendo",
-                            ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            DescriptionTypeBudget = "Arriendo"
                         });
                 });
 
@@ -172,11 +159,10 @@ namespace PersonalFinance.Infraestructure.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("CreationDate")
+                    b.Property<DateTime?>("CreationDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreationUser")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("CreditAmount")
@@ -202,11 +188,11 @@ namespace PersonalFinance.Infraestructure.Migrations
                         .HasColumnType("bit")
                         .HasDefaultValue(false);
 
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("ModificationUser")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("ModifiedDate")
-                        .HasColumnType("datetime2");
 
                     b.Property<decimal>("MonthlyInterest")
                         .ValueGeneratedOnAdd()
@@ -250,11 +236,10 @@ namespace PersonalFinance.Infraestructure.Migrations
                     b.Property<int>("AssociatedDebtId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("CreationDate")
+                    b.Property<DateTime?>("CreationDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreationUser")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Deleted")
@@ -262,11 +247,11 @@ namespace PersonalFinance.Infraestructure.Migrations
                         .HasColumnType("bit")
                         .HasDefaultValue(false);
 
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("ModificationUser")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("ModifiedDate")
-                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("MovementDate")
                         .HasColumnType("datetime2");
@@ -299,11 +284,10 @@ namespace PersonalFinance.Infraestructure.Migrations
                     b.Property<int>("BudgetTypeId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("CreationDate")
+                    b.Property<DateTime?>("CreationDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreationUser")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Deleted")
@@ -324,11 +308,11 @@ namespace PersonalFinance.Infraestructure.Migrations
                         .HasColumnType("decimal(18,2)")
                         .HasDefaultValue(0m);
 
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("ModificationUser")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("ModifiedDate")
-                        .HasColumnType("datetime2");
 
                     b.HasKey("Id")
                         .HasName("PK_MonthlyBudget");
@@ -343,7 +327,8 @@ namespace PersonalFinance.Infraestructure.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("CreationDate")
+                    b.Property<DateTime?>("CreationDate")
+                        .IsRequired()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreationUser")
@@ -359,11 +344,11 @@ namespace PersonalFinance.Infraestructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("ModificationUser")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("ModifiedDate")
-                        .HasColumnType("datetime2");
 
                     b.Property<int>("MovementTypeSign")
                         .ValueGeneratedOnAdd()
@@ -379,11 +364,10 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 1,
-                            CreationDate = new DateTime(2021, 8, 16, 23, 21, 6, 178, DateTimeKind.Local).AddTicks(9404),
+                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 50, DateTimeKind.Local).AddTicks(4814),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeMovement = "Salario",
-                            ModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             MovementTypeSign = 1
                         });
                 });
@@ -395,11 +379,10 @@ namespace PersonalFinance.Infraestructure.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("CreationDate")
+                    b.Property<DateTime?>("CreationDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreationUser")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("CurrentBalanceSaved")
@@ -420,11 +403,11 @@ namespace PersonalFinance.Infraestructure.Migrations
                         .HasColumnType("bit")
                         .HasDefaultValue(false);
 
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("ModificationUser")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("ModifiedDate")
-                        .HasColumnType("datetime2");
 
                     b.Property<int>("NumberMonthsIntArrears")
                         .ValueGeneratedOnAdd()
@@ -470,11 +453,10 @@ namespace PersonalFinance.Infraestructure.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("CreationDate")
+                    b.Property<DateTime?>("CreationDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreationUser")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Deleted")
@@ -482,11 +464,11 @@ namespace PersonalFinance.Infraestructure.Migrations
                         .HasColumnType("bit")
                         .HasDefaultValue(false);
 
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("ModificationUser")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("ModifiedDate")
-                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .IsRequired()

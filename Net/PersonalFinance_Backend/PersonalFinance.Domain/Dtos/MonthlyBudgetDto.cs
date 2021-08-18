@@ -12,7 +12,7 @@ namespace PersonalFinance.Domain.Dtos
         public decimal ExpectedSpending { get; set; }
         public decimal GeneratedSpending { get; set; }
         public DateTime BudgedDate { get; set; }
-        public DateTime? ModifiedDate { get; set; }
+        public DateTime? ModificationDate { get; set; }
         public string ModificationUser { get; set; }
         public DateTime? CreationDate { get; set; }
         public string CreationUser { get; set; }

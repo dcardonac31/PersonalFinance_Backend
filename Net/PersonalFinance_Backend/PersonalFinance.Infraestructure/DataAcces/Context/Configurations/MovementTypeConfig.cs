@@ -30,7 +30,7 @@ namespace PersonalFinance.Infraestructure.DataAcces.Context.Configurations
             builder.Property(e => e.CreationUser)
                 .IsRequired();
 
-            builder.Property(e => e.ModifiedDate);
+            builder.Property(e => e.ModificationDate);
 
             builder.Property(e => e.ModificationUser);
 

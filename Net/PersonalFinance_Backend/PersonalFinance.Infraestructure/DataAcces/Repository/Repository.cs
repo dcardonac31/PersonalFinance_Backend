@@ -76,14 +76,20 @@ namespace PersonalFinance.Infraestructure.DataAcces.Repository
         }
 
         #region IRepository<TEntity> Members
+#pragma warning disable 1998
+
         /// <summary>
         /// Ases the queryable.
         /// </summary>
-        /// <returns>Task&lt;IQueryable&lt;TEntity&gt;&gt;.</returns>
+        /// <returns>IQueryable&lt;TEntity&gt;.</returns>
+        /// Retorna un objeto del tipo AsQueryable
+        /// <remarks>Elkin Vasquez Isenia</remarks>
         public async Task<IQueryable<TEntity>> AsQueryable()
         {
             return _entities.AsQueryable();
         }
+
+#pragma warning disable 1998
 
         /// <summary>
         /// [ERROR: invalid expression MethodName.Words.ExceptLastPascalCase] as an asynchronous operation.

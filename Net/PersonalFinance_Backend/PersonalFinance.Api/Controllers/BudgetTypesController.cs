@@ -120,7 +120,7 @@ namespace PersonalFinance.Api.Controllers
             if (objRequest.ModificationUser is null)
                 objRequest.ModificationUser = "dcardonac";
 
-            objRequest.ModifiedDate = DateTime.Now;
+            objRequest.ModificationDate = DateTime.Now;
 
             var status = await _service.PutAsync(id, objRequest).ConfigureAwait(false);
 

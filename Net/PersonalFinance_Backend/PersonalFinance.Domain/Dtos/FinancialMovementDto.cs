@@ -11,7 +11,7 @@ namespace PersonalFinance.Domain.Dtos
         public DateTime MovementDate { get; set; }
         public decimal MovementValue { get; set; }
         public string MovementDetail { get; set; }
-        public DateTime? ModifiedDate { get; set; }
+        public DateTime? ModificationDate { get; set; }
         public string ModificationUser { get; set; }
         public DateTime? CreationDate { get; set; }
         public string CreationUser { get; set; }
