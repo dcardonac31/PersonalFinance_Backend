@@ -8,7 +8,10 @@ namespace PersonalFinance.Infraestructure.DataAcces.Entities
     {
         [Key]
         public int Id { get; set; }
-        public int AssociatedDebtId { get; set; }
+        [Required]
+        public int MovementTypeId { get; set; }
+        public int? AssociatedDebtId { get; set; }
+        public int? AssociatedSavingId { get; set; }
         [Required]
         public DateTime MovementDate { get; set; }
         [Required]

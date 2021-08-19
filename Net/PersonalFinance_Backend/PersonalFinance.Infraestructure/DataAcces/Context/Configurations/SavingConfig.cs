@@ -65,6 +65,12 @@ namespace PersonalFinance.Infraestructure.DataAcces.Context.Configurations
             builder.Property(e => e.Deleted)
                 .HasDefaultValue(false)
                 .IsRequired();
+
+            builder.HasIndex(e => e.CreationDate).HasDatabaseName("IX_Saving_CreationDate");
+
+            builder.HasIndex(e => e.ThirdPartyId).HasDatabaseName("IX_Saving_ThirdPartyId");
+
+            builder.HasOne<ThirdParty>().WithMany().HasForeignKey(r => r.ThirdPartyId).HasConstraintName("FK_Saving_ThirdPartyId");
         }
     }
 }

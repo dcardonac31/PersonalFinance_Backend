@@ -45,6 +45,17 @@ namespace PersonalFinance.Infraestructure.DataAcces.Context.Configurations
             builder.Property(e => e.Deleted)
                 .HasDefaultValue(false)
                 .IsRequired();
+
+            builder.HasIndex(e => e.CreationDate).HasDatabaseName("IX_MonthlyBudget_CreationDate");
+
+            builder.HasIndex(e => e.FinancialMovementId).HasDatabaseName("IX_MonthlyBudget_FinancialMovementId");
+
+            builder.HasIndex(e => e.BudgetTypeId).HasDatabaseName("IX_MonthlyBudget_BudgetTypeId");
+
+            builder.HasOne<FinancialMovement>().WithMany().HasForeignKey(r => r.FinancialMovementId).HasConstraintName("FK_MonthlyBudget_FinancialMovementId");
+
+            builder.HasOne<BudgetType>().WithMany().HasForeignKey(r => r.BudgetTypeId).HasConstraintName("FK_MonthlyBudget_BudgetTypeId");
+
         }
     }
 }

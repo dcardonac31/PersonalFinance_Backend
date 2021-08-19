@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonalFinance.Common.Prox
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonalFinance.Domain", "PersonalFinance.Domain\PersonalFinance.Domain.csproj", "{7AFC3065-E9D6-42CE-8A0D-ED2C2DCC2E34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalFinance.Test", "PersonalFinance.Test\PersonalFinance.Test.csproj", "{CEF848E3-E376-49E1-B230-D2E114BD0262}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonalFinance.Test", "PersonalFinance.Test\PersonalFinance.Test.csproj", "{CEF848E3-E376-49E1-B230-D2E114BD0262}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

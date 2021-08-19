@@ -59,9 +59,12 @@ namespace PersonalFinance.Api
             services.AddScoped<IBudgetTypeService, BudgetTypeService>();
             services.AddScoped<IThirdPartyService, ThirdPartyService>();
             services.AddScoped<IDebtService, DebtService>();
+            services.AddScoped<IDebtDetailService, DebtDetailService>();
             services.AddScoped<IFinancialMovementService, FinancialMovementService>();
             services.AddScoped<IMonthlyBudgetService, MonthlyBudgetService>();
             services.AddScoped<IMovementTypeService, MovementTypeService>();
+            services.AddScoped<ISavingService, SavingService>();
+            services.AddScoped<ISavingDetailService, SavingDetailService>();
 
             // Infrastructure
             services.AddTransient<IUnitOfWork, UnitOfWork>();

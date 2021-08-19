@@ -10,7 +10,7 @@ using PersonalFinance.Infraestructure.DataAcces.Context;
 namespace PersonalFinance.Infraestructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210818202812_Initial")]
+    [Migration("20210819063124_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -59,7 +59,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 1,
-                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(345),
+                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5211),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Mercado"
@@ -67,7 +67,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 2,
-                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(458),
+                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5279),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Mercado diario"
@@ -75,7 +75,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 3,
-                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(467),
+                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5283),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Pago deudas"
@@ -83,7 +83,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 4,
-                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(470),
+                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5285),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Ahorros"
@@ -91,7 +91,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 5,
-                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(473),
+                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5288),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Inversiones"
@@ -99,7 +99,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 6,
-                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(492),
+                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5297),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Comidas rapidas"
@@ -107,7 +107,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 7,
-                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(496),
+                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5299),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Vestuario"
@@ -115,7 +115,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 8,
-                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(499),
+                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5302),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Electrodomesticos"
@@ -123,7 +123,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 9,
-                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(503),
+                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5304),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Computador"
@@ -131,7 +131,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 10,
-                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(510),
+                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5308),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Transporte"
@@ -139,7 +139,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 11,
-                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(513),
+                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5310),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Salud"
@@ -147,7 +147,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 12,
-                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 55, DateTimeKind.Local).AddTicks(516),
+                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5311),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Arriendo"
@@ -225,7 +225,75 @@ namespace PersonalFinance.Infraestructure.Migrations
                     b.HasKey("Id")
                         .HasName("PK_Debt");
 
+                    b.HasIndex("CreationDate")
+                        .HasDatabaseName("IX_Debt_CreationDate");
+
+                    b.HasIndex("ThirdPartyId")
+                        .HasDatabaseName("IX_Debt_ThirdPartyId");
+
                     b.ToTable("Debt");
+                });
+
+            modelBuilder.Entity("PersonalFinance.Infraestructure.DataAcces.Entities.DebtDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<decimal>("AmortizedCapital")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("decimal(18,2)")
+                        .HasDefaultValue(0m);
+
+                    b.Property<DateTime?>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreationUser")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("DebtId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Deleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<decimal>("FeeValue")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("decimal(18,2)")
+                        .HasDefaultValue(0m);
+
+                    b.Property<decimal>("InterestValue")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("decimal(18,2)")
+                        .HasDefaultValue(0m);
+
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModificationUser")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("OutstandingCapital")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("decimal(18,2)")
+                        .HasDefaultValue(0m);
+
+                    b.Property<DateTime>("RegistrationDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id")
+                        .HasName("PK_DebtDetail");
+
+                    b.HasIndex("CreationDate")
+                        .HasDatabaseName("IX_TBL_DebtDetail_CreationDate");
+
+                    b.HasIndex("DebtId")
+                        .HasDatabaseName("IX_TBL_DebtDetail_DebtId");
+
+                    b.ToTable("DebtDetail");
                 });
 
             modelBuilder.Entity("PersonalFinance.Infraestructure.DataAcces.Entities.FinancialMovement", b =>
@@ -235,7 +303,10 @@ namespace PersonalFinance.Infraestructure.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("AssociatedDebtId")
+                    b.Property<int?>("AssociatedDebtId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("AssociatedSavingId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("CreationDate")
@@ -262,6 +333,9 @@ namespace PersonalFinance.Infraestructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("MovementTypeId")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("MovementValue")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("decimal(18,2)")
@@ -269,6 +343,18 @@ namespace PersonalFinance.Infraestructure.Migrations
 
                     b.HasKey("Id")
                         .HasName("PK_FinancialMovement");
+
+                    b.HasIndex("AssociatedDebtId")
+                        .HasDatabaseName("IX_FinancialMovement_AssociatedDebtId");
+
+                    b.HasIndex("AssociatedSavingId")
+                        .HasDatabaseName("IX_FinancialMovement_AssociatedSavingId");
+
+                    b.HasIndex("CreationDate")
+                        .HasDatabaseName("IX_FinancialMovement_CreationDate");
+
+                    b.HasIndex("MovementTypeId")
+                        .HasDatabaseName("IX_FinancialMovement_MovementTypeId");
 
                     b.ToTable("FinancialMovement");
                 });
@@ -319,6 +405,15 @@ namespace PersonalFinance.Infraestructure.Migrations
                     b.HasKey("Id")
                         .HasName("PK_MonthlyBudget");
 
+                    b.HasIndex("BudgetTypeId")
+                        .HasDatabaseName("IX_MonthlyBudget_BudgetTypeId");
+
+                    b.HasIndex("CreationDate")
+                        .HasDatabaseName("IX_MonthlyBudget_CreationDate");
+
+                    b.HasIndex("FinancialMovementId")
+                        .HasDatabaseName("IX_MonthlyBudget_FinancialMovementId");
+
                     b.ToTable("MonthlyBudget");
                 });
 
@@ -366,7 +461,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 1,
-                            CreationDate = new DateTime(2021, 8, 18, 15, 28, 11, 50, DateTimeKind.Local).AddTicks(4814),
+                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 57, DateTimeKind.Local).AddTicks(4314),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeMovement = "Salario",
@@ -445,7 +540,65 @@ namespace PersonalFinance.Infraestructure.Migrations
                     b.HasKey("Id")
                         .HasName("PK_Saving");
 
+                    b.HasIndex("CreationDate")
+                        .HasDatabaseName("IX_Saving_CreationDate");
+
+                    b.HasIndex("ThirdPartyId")
+                        .HasDatabaseName("IX_Saving_ThirdPartyId");
+
                     b.ToTable("Saving");
+                });
+
+            modelBuilder.Entity("PersonalFinance.Infraestructure.DataAcces.Entities.SavingDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreationUser")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Deleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModificationUser")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("RegistrationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Retired")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<int>("SavingId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Value")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("decimal(18,2)")
+                        .HasDefaultValue(0m);
+
+                    b.HasKey("Id")
+                        .HasName("PK_SavingDetail");
+
+                    b.HasIndex("CreationDate")
+                        .HasDatabaseName("IX_TBL_SavingDetail_CreationDate");
+
+                    b.HasIndex("SavingId")
+                        .HasDatabaseName("IX_TBL_SavingDetail_SavingId");
+
+                    b.ToTable("SavingDetail");
                 });
 
             modelBuilder.Entity("PersonalFinance.Infraestructure.DataAcces.Entities.ThirdParty", b =>
@@ -485,6 +638,83 @@ namespace PersonalFinance.Infraestructure.Migrations
                         .HasName("PK_ThirdParty");
 
                     b.ToTable("ThirdParty");
+                });
+
+            modelBuilder.Entity("PersonalFinance.Infraestructure.DataAcces.Entities.Debt", b =>
+                {
+                    b.HasOne("PersonalFinance.Infraestructure.DataAcces.Entities.ThirdParty", null)
+                        .WithMany()
+                        .HasForeignKey("ThirdPartyId")
+                        .HasConstraintName("FK_Debt_ThirdPartyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("PersonalFinance.Infraestructure.DataAcces.Entities.DebtDetail", b =>
+                {
+                    b.HasOne("PersonalFinance.Infraestructure.DataAcces.Entities.Debt", null)
+                        .WithMany()
+                        .HasForeignKey("DebtId")
+                        .HasConstraintName("FK_DebtDetail_DebtId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("PersonalFinance.Infraestructure.DataAcces.Entities.FinancialMovement", b =>
+                {
+                    b.HasOne("PersonalFinance.Infraestructure.DataAcces.Entities.Debt", null)
+                        .WithMany()
+                        .HasForeignKey("AssociatedDebtId")
+                        .HasConstraintName("FK_FinancialMovement_AssociatedDebtId");
+
+                    b.HasOne("PersonalFinance.Infraestructure.DataAcces.Entities.Saving", null)
+                        .WithMany()
+                        .HasForeignKey("AssociatedSavingId")
+                        .HasConstraintName("FK_FinancialMovement_AssociatedSavingId");
+
+                    b.HasOne("PersonalFinance.Infraestructure.DataAcces.Entities.MovementType", null)
+                        .WithMany()
+                        .HasForeignKey("MovementTypeId")
+                        .HasConstraintName("FK_FinancialMovement_MovementTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("PersonalFinance.Infraestructure.DataAcces.Entities.MonthlyBudget", b =>
+                {
+                    b.HasOne("PersonalFinance.Infraestructure.DataAcces.Entities.BudgetType", null)
+                        .WithMany()
+                        .HasForeignKey("BudgetTypeId")
+                        .HasConstraintName("FK_MonthlyBudget_BudgetTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PersonalFinance.Infraestructure.DataAcces.Entities.FinancialMovement", null)
+                        .WithMany()
+                        .HasForeignKey("FinancialMovementId")
+                        .HasConstraintName("FK_MonthlyBudget_FinancialMovementId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("PersonalFinance.Infraestructure.DataAcces.Entities.Saving", b =>
+                {
+                    b.HasOne("PersonalFinance.Infraestructure.DataAcces.Entities.ThirdParty", null)
+                        .WithMany()
+                        .HasForeignKey("ThirdPartyId")
+                        .HasConstraintName("FK_Saving_ThirdPartyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("PersonalFinance.Infraestructure.DataAcces.Entities.SavingDetail", b =>
+                {
+                    b.HasOne("PersonalFinance.Infraestructure.DataAcces.Entities.Saving", null)
+                        .WithMany()
+                        .HasForeignKey("SavingId")
+                        .HasConstraintName("FK_SavingDetail_SavingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
