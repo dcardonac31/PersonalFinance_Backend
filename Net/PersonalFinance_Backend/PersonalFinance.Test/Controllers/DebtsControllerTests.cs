@@ -19,12 +19,12 @@ using System.Threading.Tasks;
 namespace PersonalFinance.Test.Controllers
 {
     [TestClass]
-    public class BudgetTypesControllerTests
+    public class DebtsControllerTests
     {
         private MockRepository _mockRepository;
 
-        private Mock<ILogger<BudgetTypesController>> _mockLogger;
-        private Mock<IBudgetTypeService> _mockService;
+        private Mock<ILogger<DebtsController>> _mockLogger;
+        private Mock<IDebtService> _mockService;
         private Mock<IBrowserDetector> _mockBrowserDetector;
 
         [TestInitialize]
@@ -33,12 +33,12 @@ namespace PersonalFinance.Test.Controllers
             AutoMapper.Mapper.Reset();
             AutoMapperConfig.CreateMaps();
             _mockRepository = new MockRepository(MockBehavior.Strict);
-            _mockLogger = new Mock<ILogger<BudgetTypesController>>();
-            _mockService = _mockRepository.Create<IBudgetTypeService>();
+            _mockLogger = new Mock<ILogger<DebtsController>>();
+            _mockService = _mockRepository.Create<IDebtService>();
             _mockBrowserDetector = _mockRepository.Create<IBrowserDetector>();
         }
 
-        private BudgetTypesController CreateBudgetTypesController()
+        private DebtsController CreateDebtsController()
         {
             var identity = new GenericIdentity("dcardonac", ClaimTypes.Name);
             var contextUser = new ClaimsPrincipal(identity);
@@ -50,7 +50,7 @@ namespace PersonalFinance.Test.Controllers
             {
                 HttpContext = httpContext
             };
-            return new BudgetTypesController(_mockLogger.Object, _mockService.Object, _mockBrowserDetector.Object)
+            return new DebtsController(_mockLogger.Object, _mockService.Object, _mockBrowserDetector.Object)
             {
                 ControllerContext = controllerContext
             };
@@ -61,11 +61,12 @@ namespace PersonalFinance.Test.Controllers
         public async Task GetByIdAsync_ReturnsOk_WhenModelStateIsValid()
         {
             // Arrange
-            _mockService.Setup(sp => sp.GetByIdAsync(1)).ReturnsAsync(BudgetTypeStub.budgetTypeDto1);
-            var budgetTypesController = CreateBudgetTypesController();
+            int id = 1;
+            _mockService.Setup(sp => sp.GetByIdAsync(id)).ReturnsAsync(DebtStub.debtDto1);
+            var debtsController = CreateDebtsController();
 
             // Act
-            var result = await budgetTypesController.GetByIdAsync(1);
+            var result = await debtsController.GetByIdAsync(id);
 
             // Assert
             var okResult = result as ObjectResult;
@@ -73,10 +74,10 @@ namespace PersonalFinance.Test.Controllers
             Assert.IsTrue(okResult is OkObjectResult);
             Assert.AreEqual(StatusCodes.Status200OK, okResult.StatusCode);
 
-            var model = okResult.Value as ResponseService<BudgetTypeDto>;
+            var model = okResult.Value as ResponseService<DebtDto>;
             Assert.IsNotNull(model);
             Assert.IsNotNull(okResult);
-            Assert.AreEqual(BudgetTypeStub.budgetTypeDto1, model.Data);
+            Assert.AreEqual(DebtStub.debtDto1, model.Data);
             _mockService.VerifyAll();
         }
 
@@ -90,13 +91,13 @@ namespace PersonalFinance.Test.Controllers
                                     It.IsAny<int>(),
                                     It.IsAny<string>(),
                                     It.IsAny<bool>()))
-                .ReturnsAsync(BudgetTypeStub.lstBudgetTypeDto);
-            var budgetTypesController = CreateBudgetTypesController();
+                .ReturnsAsync(DebtStub.lstDebtDto);
+            var debtsController = this.CreateDebtsController();
             int? page = 1;
             int? limit = 10;
 
             // Act
-            var result = await budgetTypesController.GetAllAsync(page, limit);
+            var result = await debtsController.GetAllAsync(page, limit);
 
             // Assert
             var okResult = result as ObjectResult;
@@ -104,10 +105,10 @@ namespace PersonalFinance.Test.Controllers
             Assert.IsTrue(okResult is OkObjectResult);
             Assert.AreEqual(StatusCodes.Status200OK, okResult.StatusCode);
 
-            var model = okResult.Value as ResponseService<IEnumerable<BudgetTypeDto>>;
+            var model = okResult.Value as ResponseService<IEnumerable<DebtDto>>;
             Assert.IsNotNull(model);
             Assert.IsNotNull(okResult);
-            CollectionAssert.AreEqual(BudgetTypeStub.lstBudgetTypeDto, model.Data.ToList());
+            CollectionAssert.AreEqual(DebtStub.lstDebtDto, model.Data.ToList());
             _mockService.VerifyAll();
         }
 
@@ -116,13 +117,13 @@ namespace PersonalFinance.Test.Controllers
         public void Post_ReturnsOk_WhenModelStateIsValid()
         {
             // Arrange
-            _mockService.Setup(x => x.Post(It.IsAny<BudgetTypeDto>())).Returns((true, 1));
+            _mockService.Setup(x => x.Post(It.IsAny<DebtDto>())).Returns((true, 1));
             _mockBrowserDetector.Setup(x => x.Browser.Name).Returns("IE9");
+            var debtsController = this.CreateDebtsController();
 
-            var budgetTypesController = CreateBudgetTypesController();
 
             // Act
-            var result = budgetTypesController.Post(BudgetTypeStub.budgetTypeModel);
+            var result = debtsController.Post(DebtStub.debtModel);
 
             // Assert
             var okResult = result as ObjectResult;
@@ -137,13 +138,13 @@ namespace PersonalFinance.Test.Controllers
         public async Task Put_ReturnsOk_WhenModelStateIsValid()
         {
             // Arrange
-            _mockService.Setup(x => x.PutAsync(It.IsAny<int>(), It.IsAny<BudgetTypeDto>())).ReturnsAsync(true);
+            _mockService.Setup(x => x.PutAsync(It.IsAny<int>(), It.IsAny<DebtDto>())).ReturnsAsync(true);
             _mockBrowserDetector.Setup(x => x.Browser.Name).Returns("IE9");
 
-            var budgetTypesController = CreateBudgetTypesController();
+            var debtsController = CreateDebtsController();
 
             // Act
-            var result = await budgetTypesController.PutAsync(BudgetTypeStub.budgetTypeModel.Id, BudgetTypeStub.budgetTypeModel);
+            var result = await debtsController.PutAsync(DebtStub.debtModel.Id, DebtStub.debtModel);
 
             // Assert
             var okResult = result as ObjectResult;
@@ -158,32 +159,29 @@ namespace PersonalFinance.Test.Controllers
         public async Task Put_ReturnsBadRequestResult_WhenIdIsDiferent()
         {
             // Arrange
-            var id = 20;
-            var budgetTypesController = CreateBudgetTypesController();
-
+            var id = 10;
+            var debtsController = CreateDebtsController();
             _mockBrowserDetector.Setup(x => x.Browser.Name).Returns("IE9");
 
             // Act
-            var result = await budgetTypesController.PutAsync(id, BudgetTypeStub.budgetTypeModel);
+            var result = await debtsController.PutAsync(id, DebtStub.debtModel);
 
             // Assert
             Assert.IsInstanceOfType(result, typeof(BadRequestResult));
             _mockService.VerifyAll();
         }
 
-
         [TestMethod]
-        [Owner("David Sneider Cardona Cardenas")]
         public async Task DeleteAsync_ReturnsOk_WhenModelStateIsValid()
         {
             // Arrange
             _mockService.Setup(sp => sp.DeleteAsync(1)).ReturnsAsync(true);
             _mockBrowserDetector.Setup(x => x.Browser.Name).Returns("IE9");
 
-            var budgetTypesController = CreateBudgetTypesController();
+            var debtsController = CreateDebtsController();
 
             // Act
-            var result = await budgetTypesController.DeleteAsync(1);
+            var result = await debtsController.DeleteAsync(1);
 
             // Assert
             var okResult = result as ObjectResult;
@@ -194,17 +192,16 @@ namespace PersonalFinance.Test.Controllers
         }
 
         [TestMethod]
-        [Owner("David Sneider Cardona Cardenas")]
         public async Task DeleteLogicAsync_ReturnsOk_WhenModelStateIsValid()
         {
             // Arrange
             _mockService.Setup(sp => sp.DeleteLogicAsync(It.IsAny<DeletedInfo<int>>())).ReturnsAsync(true);
             _mockBrowserDetector.Setup(x => x.Browser.Name).Returns("IE9");
 
-            var budgetTypesController = CreateBudgetTypesController();
+            var debtsController = CreateDebtsController();
 
             // Act
-            var result = await budgetTypesController.DeleteLogicAsync(1);
+            var result = await debtsController.DeleteLogicAsync(1);
 
             // Assert
             var okResult = result as ObjectResult;

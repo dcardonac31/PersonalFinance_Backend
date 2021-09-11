@@ -7,7 +7,7 @@ namespace PersonalFinance.Api.Models
         public int Id { get; set; }
         public int ThirdPartyId { get; set; }
         public DateTime StartDate { get; set; }
-        public double CreditAmount { get; set; }
+        public decimal CreditAmount { get; set; }
         public int TermInMonths { get; set; }
         public decimal MonthlyInterest { get; set; }
         public decimal CurrentAmount { get; set; }

@@ -67,8 +67,8 @@ namespace PersonalFinance.Api
             services.AddScoped<ISavingDetailService, SavingDetailService>();
 
             // Infrastructure
-            services.AddTransient<IUnitOfWork, UnitOfWork>();
-            services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
             #endregion Register (dependency injection)
 
