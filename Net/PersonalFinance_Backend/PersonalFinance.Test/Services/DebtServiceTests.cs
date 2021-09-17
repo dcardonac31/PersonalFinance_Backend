@@ -168,7 +168,6 @@ namespace PersonalFinance.Test.Services
                             ).ReturnsAsync(DebtStub.debt1);
             _repository.Setup(x => x.Update(It.IsAny<Debt>())).Returns(false);
             var service = CreateService();
-            int id = 1;
             DebtDto entity = DebtStub.debtDto2;
 
             // Act

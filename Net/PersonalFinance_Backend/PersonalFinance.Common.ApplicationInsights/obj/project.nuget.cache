@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+d2e45gOxHhFLBu+vPPs/7GdUjNQqKzO5BQLyczidgZV2XhVZ0ToFtgXftTveN5eUhInqmqckDrOtWxSrXpHkw==",
+  "dgSpecHash": "Kw8iamszTIpt4Q/b9UvEx3+I1WWZ8AMaPxrtXKbQb7D5L3unkwM9d0QOWRImM4BSMPIPMCZHBuWkbBDW2iOQNw==",
   "success": true,
   "projectFilePath": "D:\\GitRepos\\PersonalFinance_Backend\\Net\\PersonalFinance_Backend\\PersonalFinance.Common.ApplicationInsights\\PersonalFinance.Common.ApplicationInsights.csproj",
   "expectedPackageFiles": [

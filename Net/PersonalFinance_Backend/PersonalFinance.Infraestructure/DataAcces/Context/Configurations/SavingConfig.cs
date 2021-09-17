@@ -23,10 +23,6 @@ namespace PersonalFinance.Infraestructure.DataAcces.Context.Configurations
             builder.Property(e => e.StartDate)
                 .IsRequired();
 
-            builder.Property(e => e.SavedInitialAmount)
-                .HasDefaultValue(0)
-                .IsRequired();
-
             builder.Property(e => e.SavingGoal)
                 .HasDefaultValue(0)
                 .IsRequired();
@@ -48,6 +44,10 @@ namespace PersonalFinance.Infraestructure.DataAcces.Context.Configurations
 
             builder.Property(e => e.NumberMonthsIntArrears)
                 .HasDefaultValue(0)
+                .IsRequired();
+
+            builder.Property(e => e.SavingDescription)
+                .HasDefaultValue(string.Empty)
                 .IsRequired();
 
             builder.Property(e => e.SavingFinished)

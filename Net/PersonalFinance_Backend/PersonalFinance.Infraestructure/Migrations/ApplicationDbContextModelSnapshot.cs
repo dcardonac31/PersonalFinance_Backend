@@ -57,7 +57,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 1,
-                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5211),
+                            CreationDate = new DateTime(2021, 9, 16, 23, 41, 52, 340, DateTimeKind.Local).AddTicks(7345),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Mercado"
@@ -65,7 +65,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 2,
-                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5279),
+                            CreationDate = new DateTime(2021, 9, 16, 23, 41, 52, 340, DateTimeKind.Local).AddTicks(7590),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Mercado diario"
@@ -73,7 +73,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 3,
-                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5283),
+                            CreationDate = new DateTime(2021, 9, 16, 23, 41, 52, 340, DateTimeKind.Local).AddTicks(7609),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Pago deudas"
@@ -81,7 +81,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 4,
-                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5285),
+                            CreationDate = new DateTime(2021, 9, 16, 23, 41, 52, 340, DateTimeKind.Local).AddTicks(7619),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Ahorros"
@@ -89,7 +89,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 5,
-                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5288),
+                            CreationDate = new DateTime(2021, 9, 16, 23, 41, 52, 340, DateTimeKind.Local).AddTicks(7629),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Inversiones"
@@ -97,7 +97,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 6,
-                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5297),
+                            CreationDate = new DateTime(2021, 9, 16, 23, 41, 52, 340, DateTimeKind.Local).AddTicks(7664),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Comidas rapidas"
@@ -105,7 +105,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 7,
-                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5299),
+                            CreationDate = new DateTime(2021, 9, 16, 23, 41, 52, 340, DateTimeKind.Local).AddTicks(7674),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Vestuario"
@@ -113,7 +113,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 8,
-                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5302),
+                            CreationDate = new DateTime(2021, 9, 16, 23, 41, 52, 340, DateTimeKind.Local).AddTicks(7683),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Electrodomesticos"
@@ -121,7 +121,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 9,
-                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5304),
+                            CreationDate = new DateTime(2021, 9, 16, 23, 41, 52, 340, DateTimeKind.Local).AddTicks(7692),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Computador"
@@ -129,7 +129,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 10,
-                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5308),
+                            CreationDate = new DateTime(2021, 9, 16, 23, 41, 52, 340, DateTimeKind.Local).AddTicks(7709),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Transporte"
@@ -137,7 +137,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 11,
-                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5310),
+                            CreationDate = new DateTime(2021, 9, 16, 23, 41, 52, 340, DateTimeKind.Local).AddTicks(7718),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Salud"
@@ -145,7 +145,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 12,
-                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 60, DateTimeKind.Local).AddTicks(5311),
+                            CreationDate = new DateTime(2021, 9, 16, 23, 41, 52, 340, DateTimeKind.Local).AddTicks(7727),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeBudget = "Arriendo"
@@ -459,7 +459,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         new
                         {
                             Id = 1,
-                            CreationDate = new DateTime(2021, 8, 19, 1, 31, 23, 57, DateTimeKind.Local).AddTicks(4314),
+                            CreationDate = new DateTime(2021, 9, 16, 23, 41, 52, 326, DateTimeKind.Local).AddTicks(3681),
                             CreationUser = "Migration",
                             Deleted = false,
                             DescriptionTypeMovement = "Salario",
@@ -509,10 +509,11 @@ namespace PersonalFinance.Infraestructure.Migrations
                         .HasColumnType("int")
                         .HasDefaultValue(0);
 
-                    b.Property<decimal>("SavedInitialAmount")
+                    b.Property<string>("SavingDescription")
+                        .IsRequired()
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("decimal(18,2)")
-                        .HasDefaultValue(0m);
+                        .HasColumnType("nvarchar(max)")
+                        .HasDefaultValue("");
 
                     b.Property<bool>("SavingFinished")
                         .ValueGeneratedOnAdd()
@@ -627,7 +628,7 @@ namespace PersonalFinance.Infraestructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("NaturalPersona")
+                    b.Property<bool>("NaturalPerson")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
                         .HasDefaultValue(false);

@@ -6,8 +6,6 @@ namespace PersonalFinance.Infraestructure.DataAcces.Entities
 {
     public class MonthlyBudget : BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
         [Required]
         public int FinancialMovementId { get; set; }
         [Required]

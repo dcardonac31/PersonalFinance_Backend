@@ -6,8 +6,6 @@ namespace PersonalFinance.Infraestructure.DataAcces.Entities
 {
     public class MovementType : BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
         [Required]
         public string DescriptionTypeMovement { get; set; }
         [Required]

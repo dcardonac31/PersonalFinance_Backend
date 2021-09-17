@@ -6,8 +6,6 @@ namespace PersonalFinance.Infraestructure.DataAcces.Entities
 {
     public class FinancialMovement : BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
         [Required]
         public int MovementTypeId { get; set; }
         public int? AssociatedDebtId { get; set; }

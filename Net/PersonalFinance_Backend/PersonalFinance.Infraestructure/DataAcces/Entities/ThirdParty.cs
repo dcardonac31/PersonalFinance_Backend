@@ -5,11 +5,9 @@ namespace PersonalFinance.Infraestructure.DataAcces.Entities
 {
     public class ThirdParty : BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]
-        public bool NaturalPersona { get; set; }
+        public bool NaturalPerson { get; set; }
     }
 }

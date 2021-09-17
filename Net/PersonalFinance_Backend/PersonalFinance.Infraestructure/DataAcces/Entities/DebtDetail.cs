@@ -6,8 +6,6 @@ namespace PersonalFinance.Infraestructure.DataAcces.Entities
 {
     public class DebtDetail : BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
         [Required]
         public int DebtId { get; set; }
         [Required]

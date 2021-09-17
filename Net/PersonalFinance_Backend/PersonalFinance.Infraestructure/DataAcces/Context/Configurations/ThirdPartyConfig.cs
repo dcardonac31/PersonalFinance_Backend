@@ -20,7 +20,7 @@ namespace PersonalFinance.Infraestructure.DataAcces.Context.Configurations
             builder.Property(e => e.Name)
                 .IsRequired();
 
-            builder.Property(e => e.NaturalPersona)
+            builder.Property(e => e.NaturalPerson)
                 .HasDefaultValue(false)
                 .IsRequired();
 

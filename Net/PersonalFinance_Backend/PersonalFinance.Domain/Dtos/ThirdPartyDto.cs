@@ -8,7 +8,7 @@ namespace PersonalFinance.Domain.Dtos
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public bool NaturalPersona { get; set; }
+        public bool NaturalPerson { get; set; }
         public DateTime? ModificationDate { get; set; }
         public string ModificationUser { get; set; }
         public DateTime? CreationDate { get; set; }

@@ -6,14 +6,10 @@ namespace PersonalFinance.Infraestructure.DataAcces.Entities
 {
     public class Saving : BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
         [Required]
         public int ThirdPartyId { get; set; }
         [Required]
         public DateTime StartDate { get; set; }
-        [Required]
-        public decimal SavedInitialAmount { get; set; }
         [Required]
         public decimal SavingGoal { get; set; }
         [Required]
@@ -26,6 +22,8 @@ namespace PersonalFinance.Infraestructure.DataAcces.Entities
         public bool InArrears { get; set; }
         [Required]
         public int NumberMonthsIntArrears { get; set; }
+        [Required]
+        public string SavingDescription { get; set; }
         [Required]
         public bool SavingFinished { get; set; }
     }

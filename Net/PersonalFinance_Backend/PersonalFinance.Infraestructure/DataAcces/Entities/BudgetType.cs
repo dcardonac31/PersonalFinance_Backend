@@ -6,8 +6,6 @@ namespace PersonalFinance.Infraestructure.DataAcces.Entities
 {
     public class BudgetType : BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
         [Required]
         public string DescriptionTypeBudget { get; set; }
     }

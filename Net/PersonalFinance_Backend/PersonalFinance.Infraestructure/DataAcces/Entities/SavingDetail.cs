@@ -6,8 +6,6 @@ namespace PersonalFinance.Infraestructure.DataAcces.Entities
 {
     public class SavingDetail : BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
         [Required]
         public int SavingId { get; set; }
         [Required]
