@@ -19,12 +19,12 @@ using System.Threading.Tasks;
 namespace PersonalFinance.Test.Controllers
 {
     [TestClass]
-    public class SavingControllerTests
+    public class SavingDetailsControllerTests
     {
         private MockRepository _mockRepository;
 
-        private Mock<ILogger<SavingController>> _mockLogger;
-        private Mock<ISavingService> _mockService;
+        private Mock<ILogger<SavingDetailsController>> _mockLogger;
+        private Mock<ISavingDetailService> _mockService;
         private Mock<IBrowserDetector> _mockBrowserDetector;
 
         [TestInitialize]
@@ -33,12 +33,12 @@ namespace PersonalFinance.Test.Controllers
             AutoMapper.Mapper.Reset();
             AutoMapperConfig.CreateMaps();
             _mockRepository = new MockRepository(MockBehavior.Strict);
-            _mockLogger = new Mock<ILogger<SavingController>>();
-            _mockService = _mockRepository.Create<ISavingService>();
+            _mockLogger = new Mock<ILogger<SavingDetailsController>>();
+            _mockService = _mockRepository.Create<ISavingDetailService>();
             _mockBrowserDetector = _mockRepository.Create<IBrowserDetector>();
         }
 
-        private SavingController CreateSavingController()
+        private SavingDetailsController CreateSavingDetailController()
         {
             var identity = new GenericIdentity("dcardonac", ClaimTypes.Name);
             var contextUser = new ClaimsPrincipal(identity);
@@ -50,7 +50,7 @@ namespace PersonalFinance.Test.Controllers
             {
                 HttpContext = httpContext
             };
-            return new SavingController(_mockLogger.Object, _mockService.Object, _mockBrowserDetector.Object)
+            return new SavingDetailsController(_mockLogger.Object, _mockService.Object, _mockBrowserDetector.Object)
             {
                 ControllerContext = controllerContext
             };
@@ -62,11 +62,11 @@ namespace PersonalFinance.Test.Controllers
         {
             // Arrange
             int id = 1;
-            _mockService.Setup(sp => sp.GetByIdAsync(id)).ReturnsAsync(SavingStub.savingDto1);
-            var SavingController = CreateSavingController();
+            _mockService.Setup(sp => sp.GetByIdAsync(id)).ReturnsAsync(SavingDetailStub.savingDetailDto1);
+            var SavingDetailController = CreateSavingDetailController();
 
             // Act
-            var result = await SavingController.GetByIdAsync(id);
+            var result = await SavingDetailController.GetByIdAsync(id);
 
             // Assert
             var okResult = result as ObjectResult;
@@ -74,10 +74,10 @@ namespace PersonalFinance.Test.Controllers
             Assert.IsTrue(okResult is OkObjectResult);
             Assert.AreEqual(StatusCodes.Status200OK, okResult.StatusCode);
 
-            var model = okResult.Value as ResponseService<SavingDto>;
+            var model = okResult.Value as ResponseService<SavingDetailDto>;
             Assert.IsNotNull(model);
             Assert.IsNotNull(okResult);
-            Assert.AreEqual(SavingStub.savingDto1, model.Data);
+            Assert.AreEqual(SavingDetailStub.savingDetailDto1, model.Data);
             _mockService.VerifyAll();
         }
 
@@ -91,13 +91,13 @@ namespace PersonalFinance.Test.Controllers
                                     It.IsAny<int>(),
                                     It.IsAny<string>(),
                                     It.IsAny<bool>()))
-                .ReturnsAsync(SavingStub.lstSavingDto);
-            var SavingController = this.CreateSavingController();
+                .ReturnsAsync(SavingDetailStub.lstSavingDetailDto);
+            var SavingDetailController = this.CreateSavingDetailController();
             int? page = 1;
             int? limit = 10;
 
             // Act
-            var result = await SavingController.GetAllAsync(page, limit);
+            var result = await SavingDetailController.GetAllAsync(page, limit);
 
             // Assert
             var okResult = result as ObjectResult;
@@ -105,10 +105,10 @@ namespace PersonalFinance.Test.Controllers
             Assert.IsTrue(okResult is OkObjectResult);
             Assert.AreEqual(StatusCodes.Status200OK, okResult.StatusCode);
 
-            var model = okResult.Value as ResponseService<IEnumerable<SavingDto>>;
+            var model = okResult.Value as ResponseService<IEnumerable<SavingDetailDto>>;
             Assert.IsNotNull(model);
             Assert.IsNotNull(okResult);
-            CollectionAssert.AreEqual(SavingStub.lstSavingDto, model.Data.ToList());
+            CollectionAssert.AreEqual(SavingDetailStub.lstSavingDetailDto, model.Data.ToList());
             _mockService.VerifyAll();
         }
 
@@ -117,13 +117,13 @@ namespace PersonalFinance.Test.Controllers
         public void Post_ReturnsOk_WhenModelStateIsValid()
         {
             // Arrange
-            _mockService.Setup(x => x.Post(It.IsAny<SavingDto>())).Returns((true, 1));
+            _mockService.Setup(x => x.Post(It.IsAny<SavingDetailDto>())).Returns((true, 1));
             _mockBrowserDetector.Setup(x => x.Browser.Name).Returns("IE9");
-            var SavingController = this.CreateSavingController();
+            var SavingDetailController = this.CreateSavingDetailController();
 
 
             // Act
-            var result = SavingController.Post(SavingStub.savingModel);
+            var result = SavingDetailController.Post(SavingDetailStub.savingDetailModel);
 
             // Assert
             var okResult = result as ObjectResult;
@@ -138,13 +138,13 @@ namespace PersonalFinance.Test.Controllers
         public async Task Put_ReturnsOk_WhenModelStateIsValid()
         {
             // Arrange
-            _mockService.Setup(x => x.PutAsync(It.IsAny<int>(), It.IsAny<SavingDto>())).ReturnsAsync(true);
+            _mockService.Setup(x => x.PutAsync(It.IsAny<int>(), It.IsAny<SavingDetailDto>())).ReturnsAsync(true);
             _mockBrowserDetector.Setup(x => x.Browser.Name).Returns("IE9");
 
-            var SavingController = CreateSavingController();
+            var SavingDetailController = CreateSavingDetailController();
 
             // Act
-            var result = await SavingController.PutAsync(SavingStub.savingModel.Id, SavingStub.savingModel);
+            var result = await SavingDetailController.PutAsync(SavingDetailStub.savingDetailModel.Id, SavingDetailStub.savingDetailModel);
 
             // Assert
             var okResult = result as ObjectResult;
@@ -160,11 +160,11 @@ namespace PersonalFinance.Test.Controllers
         {
             // Arrange
             var id = 10;
-            var SavingController = CreateSavingController();
+            var SavingDetailController = CreateSavingDetailController();
             _mockBrowserDetector.Setup(x => x.Browser.Name).Returns("IE9");
 
             // Act
-            var result = await SavingController.PutAsync(id, SavingStub.savingModel);
+            var result = await SavingDetailController.PutAsync(id, SavingDetailStub.savingDetailModel);
 
             // Assert
             Assert.IsInstanceOfType(result, typeof(BadRequestResult));
@@ -178,10 +178,10 @@ namespace PersonalFinance.Test.Controllers
             _mockService.Setup(sp => sp.DeleteAsync(1)).ReturnsAsync(true);
             _mockBrowserDetector.Setup(x => x.Browser.Name).Returns("IE9");
 
-            var SavingController = CreateSavingController();
+            var SavingDetailController = CreateSavingDetailController();
 
             // Act
-            var result = await SavingController.DeleteAsync(1);
+            var result = await SavingDetailController.DeleteAsync(1);
 
             // Assert
             var okResult = result as ObjectResult;
@@ -198,10 +198,10 @@ namespace PersonalFinance.Test.Controllers
             _mockService.Setup(sp => sp.DeleteLogicAsync(It.IsAny<DeletedInfo<int>>())).ReturnsAsync(true);
             _mockBrowserDetector.Setup(x => x.Browser.Name).Returns("IE9");
 
-            var SavingController = CreateSavingController();
+            var SavingDetailController = CreateSavingDetailController();
 
             // Act
-            var result = await SavingController.DeleteLogicAsync(1);
+            var result = await SavingDetailController.DeleteLogicAsync(1);
 
             // Assert
             var okResult = result as ObjectResult;

@@ -20,13 +20,13 @@ namespace PersonalFinance.Api.Controllers
     //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class SavingDetailController : ControllerBase
+    public class MovementTypesController : ControllerBase
     {
-        private readonly ILogger<SavingDetailController> _logger;
-        private readonly ISavingDetailService _service;
+        private readonly ILogger<MovementTypesController> _logger;
+        private readonly IMovementTypeService _service;
         private readonly IBrowserDetector _browserDetector;
 
-        public SavingDetailController(ILogger<SavingDetailController> logger, ISavingDetailService service, IBrowserDetector browserDetector)
+        public MovementTypesController(ILogger<MovementTypesController> logger, IMovementTypeService service, IBrowserDetector browserDetector)
         {
             _logger = logger;
             _service = service;
@@ -35,7 +35,7 @@ namespace PersonalFinance.Api.Controllers
 
         [HttpGet("{id}")]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        [ProducesResponseType(typeof(ResponseService<SavingDetailDto>), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(ResponseService<MovementTypeDto>), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> GetByIdAsync(int id)
         {
             _logger.LogInformation(nameof(GetByIdAsync));
@@ -47,7 +47,7 @@ namespace PersonalFinance.Api.Controllers
 
             var result = await _service.GetByIdAsync(id).ConfigureAwait(false);
             var existResult = result != null;
-            var response = new ResponseService<SavingDetailDto>
+            var response = new ResponseService<MovementTypeDto>
             {
                 Status = existResult,
                 Message = existResult ? GenericEnumerator.Status.Ok.ToStringAttribute() : GenericEnumerator.Status.Error.ToStringAttribute(),
@@ -57,15 +57,15 @@ namespace PersonalFinance.Api.Controllers
         }
 
         [HttpGet("{page:int}/{limit:int}")]
-        [ProducesResponseType(typeof(ResponseService<IEnumerable<SavingDetailDto>>), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(ResponseService<IEnumerable<MovementTypeDto>>), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> GetAllAsync(int? page, int? limit)
         {
             _logger.LogInformation(nameof(GetAllAsync));
 
             var result = await _service.GetAllAsync(page ?? 1, limit ?? 1000, "Id").ConfigureAwait(false);
-            var resultDtos = result as SavingDetailDto[] ?? result.ToArray();
+            var resultDtos = result as MovementTypeDto[] ?? result.ToArray();
 
-            var response = new ResponseService<IEnumerable<SavingDetailDto>>
+            var response = new ResponseService<IEnumerable<MovementTypeDto>>
             {
                 Status = resultDtos.Any(),
                 Message = resultDtos.Any() ? GenericEnumerator.Status.Ok.ToStringAttribute() : GenericEnumerator.Status.Error.ToStringAttribute(),
@@ -79,12 +79,12 @@ namespace PersonalFinance.Api.Controllers
         [DisableRequestSizeLimit]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType(typeof(ResponseService<string>), (int)HttpStatusCode.Created)]
-        [Produces(MediaTypeNames.Application.Json, Type = typeof(SavingDetailModel))]
-        public IActionResult Post([FromBody] SavingDetailModel request)
+        [Produces(MediaTypeNames.Application.Json, Type = typeof(MovementTypeModel))]
+        public IActionResult Post([FromBody] MovementTypeModel request)
         {
             _logger.LogInformation(nameof(Post));
 
-            var objRequest = Mapper.Map<SavingDetailDto>(request);
+            var objRequest = Mapper.Map<MovementTypeDto>(request);
             objRequest.CreationUser = HttpContext.User.Identity?.Name;
             if (objRequest.CreationUser is null)
                 objRequest.CreationUser = "dcardonac";
@@ -105,15 +105,15 @@ namespace PersonalFinance.Api.Controllers
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType(typeof(ResponseService<bool>), (int)HttpStatusCode.OK)]
-        [Produces(MediaTypeNames.Application.Json, Type = typeof(SavingDetailModel))]
-        public async Task<IActionResult> PutAsync(int id, [FromBody] SavingDetailModel request)
+        [Produces(MediaTypeNames.Application.Json, Type = typeof(MovementTypeModel))]
+        public async Task<IActionResult> PutAsync(int id, [FromBody] MovementTypeModel request)
         {
             _logger.LogInformation(nameof(PutAsync));
 
             if (id != request.Id)
                 return BadRequest();
 
-            var objRequest = Mapper.Map<SavingDetailDto>(request);
+            var objRequest = Mapper.Map<MovementTypeDto>(request);
             objRequest.ModificationUser = HttpContext.User.Identity?.Name;
             if (objRequest.ModificationUser is null)
                 objRequest.ModificationUser = "dcardonac";
